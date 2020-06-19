@@ -48,60 +48,164 @@ table {
 	border-spacing: 0;
 }
 
-/* Font */
-
-@font-face {
-	font-family: founders;
-	src: url(font/founders-grotesk-condensed-web-bold.woff);
-  }
 
 /* Global */
 
 p {
-	font-family: aktiv-grotesk, sans-serif;
 	font-weight: 400;
 	font-style: normal;
 	font-size: 15px;
 }
 
 h1 {
-	font-family: founders, sans-serif;
 	font-weight: 700;
 	font-style: normal;
 	font-size: 40px;
 }
 
 h2 {
-	font-family: aktiv-grotesk, sans-serif;
 	font-weight: 400;
 	font-style: normal;
 	font-size: 25px;
 }
 
 h3 {
-	font-family: founders, sans-serif;
 	font-weight: 700;
 	font-style: normal;
 	font-size: 20px;
 }
 
+/* Sliders */
+
+.sliderGroup {
+	border: 1px solid;
+}
+
+.sliderContainer {
+	display: flex;
+}
+
+.sliderInnerContainer {
+	width: 100%;
+}
+
+.sliderValue {
+	display: flex;
+}
+
+.sliderMin {
+	width: 50%;
+}
+
+.sliderMax {
+	width: 50%;
+	text-align: right;
+}
+
+.sliderDiv {
+	width: 75%;
+}
+
+.slider {
+	width: 100%;
+}
+
 /* Header */
 
 .header {
-	height: 10vh;
-	padding: 2vh;
+	height: 100px;
+	background-color: yellow;
 }
 
 .logo {
-	font-family: founders, sans-serif;
 	font-weight: 700;
 	font-style: normal;
 	font-size: 60px;
 	width: 130px;
+	margin: 20px;
 }
 
 .logoUnderline {
-	height: 1vh;
+	height: 10px;
 	background-color: black;
 	width: 100%;
 }
+
+/* Landing Page */
+
+.landingPage {
+	display: flex;
+}
+
+.titleContainer {
+	position: relative;
+	width: 50%;
+	height: 1000px;
+	background-color: red;
+}
+
+.title {
+	font-weight: 700;
+	font-style: normal;
+	font-size: 100px;
+	text-transform: uppercase;
+	position: absolute;
+	width: 600px;
+	height: 500px;
+	background-color: pink;
+	top: 25%;
+	left: 20%;
+}
+
+.ctaContainer {
+	position: relative;
+	width: 50%;
+	height: 1000px;
+	background-color: green;
+}
+
+.cta {
+	position: absolute;
+	width: 600px;
+	height: 100px;
+	top: 45%;
+	left: 20%;
+	background-color: lightgreen;
+}
+
+/* Basics Page */
+
+.basicsPage {
+	display: flex;
+}
+
+.basicsInfoContainer {
+	position: relative;
+	width: 50%;
+	height: 1000px;
+	background-color: pink;
+}
+
+.basicsInfo {
+	position: absolute;
+	width: 600px;
+	height: 500px;
+	background-color: red;
+	top: 25%;
+	left: 20%;
+}
+
+.basicsFormContainer {
+	position: relative;
+	width: 50%;
+	height: 1000px;
+	background-color: lightgreen;
+}
+
+.basicsForm {
+	position: absolute;
+	background-color: green;
+	width: 600px;
+	left: 20%;
+}
+
