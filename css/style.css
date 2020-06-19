@@ -51,7 +51,7 @@ table {
 /* Font */
 
 @font-face {
-	font-family: founders-grotesk-condensed;
+	font-family: founders;
 	src: url(font/founders-grotesk-condensed-web-bold.woff);
   }
 
@@ -65,7 +65,7 @@ p {
 }
 
 h1 {
-	font-family: founders-grotesk-condensed, sans-serif;
+	font-family: founders, sans-serif;
 	font-weight: 700;
 	font-style: normal;
 	font-size: 40px;
@@ -79,8 +79,29 @@ h2 {
 }
 
 h3 {
-	font-family: founders-grotesk-condensed, sans-serif;
+	font-family: founders, sans-serif;
 	font-weight: 700;
 	font-style: normal;
 	font-size: 20px;
+}
+
+/* Header */
+
+.header {
+	height: 10vh;
+	padding: 2vh;
+}
+
+.logo {
+	font-family: founders, sans-serif;
+	font-weight: 700;
+	font-style: normal;
+	font-size: 60px;
+	width: 130px;
+}
+
+.logoUnderline {
+	height: 1vh;
+	background-color: black;
+	width: 100%;
 }
