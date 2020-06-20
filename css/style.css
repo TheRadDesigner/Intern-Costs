@@ -48,7 +48,6 @@ table {
 	border-spacing: 0;
 }
 
-
 /* Global */
 
 p {
@@ -112,6 +111,7 @@ h3 {
 }
 
 /* Text Input */
+
 .textInput {
 	display: flex;
 	width: 600px;
@@ -123,6 +123,7 @@ h3 {
 }
 
 /* Output Fields */
+
 .outputContainer {
 	display: flex;
 	width: 600px;
@@ -192,6 +193,16 @@ h3 {
 	left: 20%;
 }
 
+.totalUnderline {
+	width: 600px;
+	height: 5px;
+	background-color: black;
+}
+
+.formFooter {
+	display: flex;
+}
+
 #basicsForm {
 	top: 20%;
 }
@@ -207,18 +218,6 @@ h3 {
 #resultsForm {
 	top: 30%;
 }
-.totalUnderline {
-	width: 600px;
-	height: 5px;
-	background-color: black;
-}
-
-.formFooter {
-	display: flex;
-}
-
-
-
 
 /* Header */
 
@@ -240,7 +239,6 @@ h3 {
 	background-color: black;
 	width: 100%;
 }
-
 
 /* Landing Page */
 
@@ -283,5 +281,3 @@ h3 {
 	left: 20%;
 	background-color: lightgreen;
 }
-
-
