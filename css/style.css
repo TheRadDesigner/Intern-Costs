@@ -79,6 +79,7 @@ h3 {
 
 .sliderGroup {
 	border: 1px solid;
+	padding: 20px;
 }
 
 .sliderContainer {
@@ -110,6 +111,60 @@ h3 {
 	width: 100%;
 }
 
+/* Text Input */
+.textInput {
+	display: flex;
+	width: 600px;
+	border: 1px solid;
+}
+
+.textInputLabel {
+	width: 75%;
+}
+
+/* Output Fields */
+
+/* Page Layout */
+
+.page {
+	display: flex;
+	border: 5px solid;
+}
+
+.infoContainer {
+	position: relative;
+	width: 50%;
+	height: 1000px;
+	background-color: pink;
+}
+
+.info {
+	position: absolute;
+	width: 600px;
+	height: 500px;
+	background-color: red;
+	top: 25%;
+	left: 20%;
+}
+
+.formContainer {
+	position: relative;
+	width: 50%;
+	height: 1000px;
+	background-color: lightgreen;
+}
+
+.form {
+	position: absolute;
+	background-color: green;
+	width: 600px;
+	left: 20%;
+	top: 20%;
+}
+
+
+
+
 /* Header */
 
 .header {
@@ -130,6 +185,7 @@ h3 {
 	background-color: black;
 	width: 100%;
 }
+
 
 /* Landing Page */
 
@@ -173,39 +229,4 @@ h3 {
 	background-color: lightgreen;
 }
 
-/* Basics Page */
-
-.basicsPage {
-	display: flex;
-}
-
-.basicsInfoContainer {
-	position: relative;
-	width: 50%;
-	height: 1000px;
-	background-color: pink;
-}
-
-.basicsInfo {
-	position: absolute;
-	width: 600px;
-	height: 500px;
-	background-color: red;
-	top: 25%;
-	left: 20%;
-}
-
-.basicsFormContainer {
-	position: relative;
-	width: 50%;
-	height: 1000px;
-	background-color: lightgreen;
-}
-
-.basicsForm {
-	position: absolute;
-	background-color: green;
-	width: 600px;
-	left: 20%;
-}
 
