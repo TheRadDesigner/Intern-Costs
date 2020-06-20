@@ -123,6 +123,37 @@ h3 {
 }
 
 /* Output Fields */
+.outputContainer {
+	display: flex;
+	width: 600px;
+}
+
+.outputLabel {
+	width: 75%;
+}
+
+.outputField {
+	width: 25%;
+	text-align: right;
+}
+
+/* Toggle */
+
+.toggle {
+	display: flex;
+	width: 600px;
+	border: 1px solid;
+}
+
+.toggleOption {
+	width: 200px;
+	text-align: center;
+}
+
+#toggleTotal {
+	background-color: black;
+	color: white;
+}
 
 /* Page Layout */
 
@@ -160,6 +191,16 @@ h3 {
 	width: 600px;
 	left: 20%;
 	top: 20%;
+}
+
+.totalUnderline {
+	width: 600px;
+	height: 5px;
+	background-color: black;
+}
+
+.formFooter {
+	display: flex;
 }
 
 
