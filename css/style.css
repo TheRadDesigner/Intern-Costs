@@ -114,8 +114,8 @@ h3 {
 
 .textInput {
 	display: flex;
-	width: 600px;
 	border: 1px solid;
+	padding: 20px;
 }
 
 .textInputLabel {
@@ -126,7 +126,7 @@ h3 {
 
 .outputContainer {
 	display: flex;
-	width: 600px;
+	padding: 20px 20px 0 20px;
 }
 
 .outputLabel {
@@ -142,12 +142,12 @@ h3 {
 
 .toggle {
 	display: flex;
-	width: 600px;
 	border: 1px solid;
+	margin: 20px;
 }
 
 .toggleOption {
-	width: 200px;
+	width: 33%;
 	text-align: center;
 }
 
@@ -165,23 +165,23 @@ h3 {
 
 .infoContainer {
 	position: relative;
-	width: 50%;
+	width: 50vw;
 	height: 1000px;
 	background-color: pink;
 }
 
 .info {
 	position: absolute;
-	width: 600px;
+	width: 30vw;
 	height: 500px;
 	background-color: red;
 	top: 25%;
-	left: 20%;
+	left: 10vw;
 }
 
 .formContainer {
 	position: relative;
-	width: 50%;
+	width: 50vw;
 	height: 1000px;
 	background-color: lightgreen;
 }
@@ -189,14 +189,15 @@ h3 {
 .form {
 	position: absolute;
 	background-color: green;
-	width: 600px;
-	left: 20%;
+	width: 30vw;
+	left: 10vw;
 }
 
 .totalUnderline {
-	width: 600px;
+	width: 30vw;
 	height: 5px;
 	background-color: black;
+	margin: 0 0 20px 0;
 }
 
 .formFooter {
@@ -216,7 +217,7 @@ h3 {
 }
 
 #resultsForm {
-	top: 30%;
+	top: 20%;
 }
 
 /* Header */
@@ -248,7 +249,7 @@ h3 {
 
 .titleContainer {
 	position: relative;
-	width: 50%;
+	width: 50vw;
 	height: 1000px;
 	background-color: red;
 }
@@ -259,25 +260,23 @@ h3 {
 	font-size: 100px;
 	text-transform: uppercase;
 	position: absolute;
-	width: 600px;
-	height: 500px;
 	background-color: pink;
 	top: 25%;
-	left: 20%;
+	left: 10vw;
+	width: 30vw;
 }
 
 .ctaContainer {
 	position: relative;
-	width: 50%;
+	width: 50vw;
 	height: 1000px;
 	background-color: green;
 }
 
 .cta {
 	position: absolute;
-	width: 600px;
-	height: 100px;
+	width: 30vw;
 	top: 45%;
-	left: 20%;
+	left: 10vw;
 	background-color: lightgreen;
 }
