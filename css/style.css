@@ -190,9 +190,23 @@ h3 {
 	background-color: green;
 	width: 600px;
 	left: 20%;
+}
+
+#basicsForm {
 	top: 20%;
 }
 
+#billingForm {
+	top: 35%;
+}
+
+#mentorForm {
+	top: 40%;
+}
+
+#resultsForm {
+	top: 30%;
+}
 .totalUnderline {
 	width: 600px;
 	height: 5px;
