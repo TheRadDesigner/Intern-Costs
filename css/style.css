@@ -76,10 +76,6 @@ h3 {
 
 /* Sliders */
 
-.sliderGroup {
-	border: 1px solid;
-}
-
 .sliderContainer {
 	display: flex;
 	width: 30vw;
@@ -388,9 +384,10 @@ h3 {
 	/* Sliders */
 
 	.sliderContainer {
-		width: 46vw;
+		display: block;
+		width: 100vw;
 	}
-
+	
 	/* Page Layout */
 
 	.infoContainer {
