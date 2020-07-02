@@ -1,14 +1,12 @@
 /* Font */
 
 @font-face {
-	font-family: 'Founders Grotesk Condensed';
-	src: url('/font/founders-grotesk-condensed-web-bold.eot'); /* IE9 Compat Modes */
-	src: url('/font/founders-grotesk-condensed-web-bold.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-		 url('/font/founders-grotesk-condensed-web-bold.woff2') format('woff2'), /* Super Modern Browsers */
-		 url('/font/founders-grotesk-condensed-web-bold.woff') format('woff'), /* Pretty Modern Browsers */
+	font-family: 'FoundersGrotesk';
+	src: url("/font/founders-grotesk-condensed-web-bold.woff"), 
+	url("/font/founders-grotesk-condensed-web-bold.eot")
   }
 
-/* CSS Reset */
+CSS Reset
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
    License: none (public domain)
@@ -60,59 +58,80 @@ table {
 
 /* Global */
 
-.siteWrapper {
-	position: relative;
-	overflow: hidden;
-}
 
 p {
-	font-family: Aktiv Grotesk;
+	font-family: aktiv-grotesk, sans-serif;
+	font-weight: 300;
+	font-style: normal;
 	font-size: 15px;
 	line-height: 18px;
+	font-style: normal;
 }
 
 .title {
-	font: Bold 130px/110px Founders Grotesk Condensed;
+	font-family: FoundersGrotesk, sans-serif;
+	font-size: 130px;
+	line-height: 110px;
+	font-weight: bold;
 	letter-spacing: 0px;
 	text-transform: uppercase;
+	font-style: bold;
 }
 
 h1 {
-	font: Bold 40px/43px Founders Grotesk Condensed;
+	font-family: FoundersGrotesk, sans-serif;
+	font-style: bold;
+	font-weight: bold;
+	font-size: 40px;
+	line-height: 43px;
+	
 }
 
 h2 {
-	font-family: Aktiv Grotesk;
+	font-family: aktiv-grotesk, sans-serif;
+	font-weight: 300;
+	font-style: normal;
 	font-size: 25px;
 	line-height: 32px;
+
 }
 
 h2 a {
 	color: #FFBB37;
 	font-weight: 600;
 	text-decoration: none;
+	font-style: normal;
 }
 
 h2 a:hover {
 	background-color: #FFBB37;
 	color: white;
+	font-style: normal;
 }
 
 h3 {
-	font-family: Aktiv Grotesk;
+	font-family: aktiv-grotesk, sans-serif;
+	font-weight: 300;
+	font-size: 20px;
+	line-height: 23px;
+	font-style: normal;
+}
+
+h4 {
+	font-family: FoundersGrotesk, sans-serif;
+	font-style: bold;
+	font-weight: bold;
 	font-size: 20px;
 	line-height: 23px;
 }
 
-h4 {
-	font: Bold 20px/18px Founders Grotesk Condensed;
-}
-
 h5 {
-	font-family: Aktiv Grotesk;
+	font-family: aktiv-grotesk, sans-serif;
+	font-weight: 300;
 	font-size: 15px;
 	line-height: 18px;
 	font-weight: 600;
+	font-style: normal;
 }
 
 /* Buttons */
@@ -122,7 +141,8 @@ h5 {
 button {
 	-webkit-appearance: none;
 	text-align: center;
-	font-family: Aktiv Grotesk;
+	font-family: aktiv-grotesk, sans-serif;
+	font-weight: 600;
 	font-size: 20px;
 	line-height: 26px;
 	background-color: none;
@@ -170,10 +190,12 @@ button:hover {
 }
 
 .moreInformation a {
-	font-family: Aktiv Grotesk;
+	font-family: aktiv-grotesk, sans-serif;
+	font-weight: 600;
 	font-size: 12px;
 	line-height: 15px;
 	color: #FFBB37;
+	text-decoration: none;
 }
 /* Text Input */
 
@@ -192,7 +214,8 @@ input[type=text] {
 	border: 5px solid #FFBB37;
 	border-radius: 25px;
 	float: right;
-	font-family: Aktiv Grotesk;
+	font-family: aktiv-grotesk, sans-serif;
+	font-weight: 600;
 	font-size: 20px;
 	line-height: 23px;
 	text-align: center;
