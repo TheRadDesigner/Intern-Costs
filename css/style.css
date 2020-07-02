@@ -60,6 +60,11 @@ table {
 
 /* Global */
 
+.siteWrapper {
+	position: relative;
+	overflow: hidden;
+}
+
 p {
 	font-family: Aktiv Grotesk;
 	font-size: 15px;
@@ -258,8 +263,6 @@ input[type=text] {
 	position: absolute;
 	width: 30vw;
 	height: 500px;
-	
-	top: 25%;
 	left: 10vw;
 }
 
@@ -285,65 +288,53 @@ input[type=text] {
 	display: flex;
 }
 
-#basicsForm {
-	top: 20%;
-}
 
-#billingForm {
-	top: 35%;
-}
-
-#mentorForm {
-	top: 40%;
-}
-
-#resultsForm {
-	top: 30%;
-}
 
 /* Header */
 
 .header {
-	height: 100px;
+	height: 10vh;
+	padding: 20px;
+	display: flex;
+	position: fixed;
+	width: 100vw;
+	top: 0;
 }
 
 .logo {
 	font-size: 60px;
 	width: 130px;
 	text-align: left;
-	font: Bold 60px/100px Founders Grotesk Condensed;
+	font: Bold 60px/60px Founders Grotesk Condensed;
 	letter-spacing: 0px;
 }
 
 .logoUnderline {
 	height: 10px;
+	background-color: black;
+	margin-top: -15px;
+	width: 100px;
+}
+
+.headerAdvice {
+	text-align: right;
+	width: 90%;
 }
 
 /* Landing Page */
 
-.landingPage {
-	display: flex;
-}
-
-.titleContainer {
-	position: relative;
-	width: 50vw;
-	height: 1000px;
-}
-
 .pageTitle {
 	text-align: left;
 	position: absolute;
-	top: 25%;
 	left: 10vw;
+	top: 20vh;
 	width: 30vw;
 }
 
 .ctaContainer {
 	position: relative;
 	width: 50vw;
-	height: 1000px;
-	
+	height: 90vh;	
 }
 
 .cta {
