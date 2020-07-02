@@ -1,3 +1,13 @@
+/* Font */
+
+@font-face {
+	font-family: 'Founders Grotesk Condensed';
+	src: url('/font/founders-grotesk-condensed-web-bold.eot'); /* IE9 Compat Modes */
+	src: url('/font/founders-grotesk-condensed-web-bold.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+		 url('/font/founders-grotesk-condensed-web-bold.woff2') format('woff2'), /* Super Modern Browsers */
+		 url('/font/founders-grotesk-condensed-web-bold.woff') format('woff'), /* Pretty Modern Browsers */
+  }
+
 /* CSS Reset */
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
@@ -51,27 +61,79 @@ table {
 /* Global */
 
 p {
-	font-weight: 400;
-	font-style: normal;
+	font-family: Aktiv Grotesk;
 	font-size: 15px;
+	line-height: 18px;
+}
+
+.title {
+	font: Bold 130px/110px Founders Grotesk Condensed;
+	letter-spacing: 0px;
+	text-transform: uppercase;
 }
 
 h1 {
-	font-weight: 700;
-	font-style: normal;
-	font-size: 40px;
+	font: Bold 40px/43px Founders Grotesk Condensed;
 }
 
 h2 {
-	font-weight: 400;
-	font-style: normal;
+	font-family: Aktiv Grotesk;
 	font-size: 25px;
+	line-height: 32px;
+}
+
+h2 a {
+	color: #FFBB37;
+	font-weight: 600;
+	text-decoration: none;
+}
+
+h2 a:hover {
+	background-color: #FFBB37;
+	color: white;
 }
 
 h3 {
-	font-weight: 700;
-	font-style: normal;
+	font-family: Aktiv Grotesk;
 	font-size: 20px;
+	line-height: 23px;
+}
+
+h4 {
+	font: Bold 20px/18px Founders Grotesk Condensed;
+}
+
+h5 {
+	font-family: Aktiv Grotesk;
+	font-size: 15px;
+	line-height: 18px;
+	font-weight: 600;
+}
+
+/* Buttons */
+
+
+
+button {
+	-webkit-appearance: none;
+	text-align: center;
+	font-family: Aktiv Grotesk;
+	font-size: 20px;
+	line-height: 26px;
+	background-color: none;
+	border: 5px solid #FFBB37;
+	border-radius: 25px;
+	width: 200px;
+	height: 45px;
+	float: right;
+	background-color: white;
+	box-sizing: border-box;
+	cursor: pointer;
+}
+
+button:hover {
+	background-color: #FFBB37;
+	color: white;
 }
 
 /* Sliders */
@@ -101,15 +163,67 @@ h3 {
 	width: 50%;
 	text-align: right;
 }
+
+.moreInformation a {
+	font-family: Aktiv Grotesk;
+	font-size: 12px;
+	line-height: 15px;
+	color: #FFBB37;
+}
 /* Text Input */
 
 .textInput {
 	display: flex;
-	border: 1px solid;
 }
 
 .textInputLabel {
 	width: 75%;
+}
+
+input[type=text] {
+	-webkit-appearance: none;
+	width: 120px;
+	height: 40px;
+	border: 5px solid #FFBB37;
+	border-radius: 25px;
+	float: right;
+	font-family: Aktiv Grotesk;
+	font-size: 20px;
+	line-height: 23px;
+	text-align: center;
+	margin-left: 50px;
+	box-sizing: border-box;
+}
+
+/* Toggle */
+
+.toggle {
+	margin: auto;
+	font-family: Aktiv Grotesk;
+	font-size: 20px;
+	line-height: 23px;
+	height: 40px;
+	border: 5px solid #FFBB37;
+	border-radius: 25px;
+	position:relative;
+	display:flex;
+	box-sizing: border-box;
+}
+
+.toggleStop{
+	cursor: pointer;
+	position: relative;
+	text-align: center;
+	flex-grow: 1;
+	padding: 3px;
+}
+
+.toggleSelector {
+	text-align: center;
+	position: absolute;
+	width: 0;
+	box-sizing: border-box;
+	color: white;
 }
 
 /* Output Fields */
@@ -127,24 +241,6 @@ h3 {
 	text-align: right;
 }
 
-/* Toggle */
-
-.toggle {
-	display: flex;
-	border: 1px solid;
-	margin: 20px;
-}
-
-.toggleOption {
-	width: 33%;
-	text-align: center;
-}
-
-#toggleTotal {
-	background-color: black;
-	color: white;
-}
-
 /* Page Layout */
 
 .page {
@@ -156,14 +252,13 @@ h3 {
 	position: relative;
 	width: 50vw;
 	height: 1000px;
-	background-color: pink;
 }
 
 .info {
 	position: absolute;
 	width: 30vw;
 	height: 500px;
-	background-color: red;
+	
 	top: 25%;
 	left: 10vw;
 }
@@ -172,12 +267,10 @@ h3 {
 	position: relative;
 	width: 50vw;
 	height: 1000px;
-	background-color: lightgreen;
 }
 
 .form {
 	position: absolute;
-	background-color: green;
 	width: 30vw;
 	left: 10vw;
 }
@@ -212,12 +305,14 @@ h3 {
 
 .header {
 	height: 100px;
-	background-color: yellow;
 }
 
 .logo {
 	font-size: 60px;
 	width: 130px;
+	text-align: left;
+	font: Bold 60px/100px Founders Grotesk Condensed;
+	letter-spacing: 0px;
 }
 
 .logoUnderline {
@@ -234,16 +329,11 @@ h3 {
 	position: relative;
 	width: 50vw;
 	height: 1000px;
-	background-color: red;
 }
 
-.title {
-	font-weight: 700;
-	font-style: normal;
-	font-size: 100px;
-	text-transform: uppercase;
+.pageTitle {
+	text-align: left;
 	position: absolute;
-	background-color: pink;
 	top: 25%;
 	left: 10vw;
 	width: 30vw;
@@ -253,7 +343,7 @@ h3 {
 	position: relative;
 	width: 50vw;
 	height: 1000px;
-	background-color: green;
+	
 }
 
 .cta {
@@ -261,7 +351,17 @@ h3 {
 	width: 30vw;
 	top: 45%;
 	left: 10vw;
-	background-color: lightgreen;
+	
+}
+
+/* Results Page */
+
+.askCommunity {
+	width: 70%;
+}
+
+.askCommunity h3 {
+	padding-bottom: 10px;
 }
 /* Media Queries */
 
