@@ -5,92 +5,136 @@
   // Set Hours Per Week
 
     var hoursPerWeek
-    var daysPerWeek = 3;
-    var hoursPerDay = 8;
+
+    function getHoursPerWeek() {
+
+      var daysPerWeek = 3;
+      var hoursPerDay = 8;
+
+      if (daysPerWeek <2) {
+        console.log("days per week is too short")
+      }
+      else if (daysPerWeek >3) {
+        console.log("days per week is too long")
+      }
+      else {
+        console.log("days per week is correct")
+      };
   
+      if (hoursPerDay <4) {
+        console.log("Shift is not long enough")
+      }
+      else if (hoursPerDay >8) {
+        console.log("shift is too short")
+      }
+      else {
+        console.log("shift is correct")
+      };
 
-    if (daysPerWeek <2) {
-      console.log("days per week is too short")
+      hoursPerWeek = hoursPerDay * daysPerWeek;
     }
-    else if (daysPerWeek >3) {
-      console.log("days per week is too long")
-    }
-    else {
-      console.log("days per week is correct")
-    };
 
-    if (hoursPerDay <4) {
-      console.log("Shift is not long enough")
-    }
-    else if (hoursPerDay >8) {
-      console.log("shift is too short")
-    }
-    else {
-      console.log("shift is correct")
-    };
-
-    hoursPerWeek = hoursPerDay * daysPerWeek;
+    
+  
+    
 
     //Work Out Wages
 
-    var payRate = 30;
+    var weeklySuper
 
-    if (payRate <25) {
-      console.log("Pay is too Low")
+    var weeklyWages
+
+    function getWeeklyWage() {
+      var payRate = 30;
+
+      if (payRate <25) {
+        console.log("Pay is too Low")
+      }
+      else if (payRate>40) {
+        console.log("Pay is too high")
+      }
+      else {
+        console.log("Pay is correct")
+      };
+  
+      var superPerHour = payRate * 0.095;
+  
+      weeklySuper = superPerHour * hoursPerWeek;
+  
+      weeklyWages = payRate * hoursPerWeek;
     }
-    else if (payRate>40) {
-      console.log("Pay is too high")
-    }
-    else {
-      console.log("Pay is correct")
-    };
 
-    var superPerHour = payRate * 0.095;
 
-    var weeklySuper = superPerHour * hoursPerWeek;
 
-    var weeklyWages = payRate * hoursPerWeek;
 
     //Work Out Billings
 
-    var internBillableHoursPerWeek = hoursPerWeek / 2;
+    var internBillableHoursPerWeek
 
-    var internBillRate = 90;
+    var internBillingsPerWeek
 
-    var internBillingsPerWeek = internBillRate * 4;
+    function getWeeklyBillings() {
+      internBillableHoursPerWeek = hoursPerWeek / 2;
+
+      var internBillRate = 90;
+  
+      internBillingsPerWeek = internBillRate * 4;
+    }
+
 
     // Work Out Mentoring Costs
 
-    var mentorHoursPerWeek = hoursPerWeek * 0.4;
+    var mentorHoursPerWeek
+    var mentorCostPerWeek
 
-    var mentorBillRate = 100;
+    function getWeeklyMentor() {
+      mentorHoursPerWeek = hoursPerWeek * 0.4;
 
-    var mentorCostPerWeek = mentorHoursPerWeek * mentorBillRate;
+      var mentorBillRate = 100;
+  
+      mentorCostPerWeek = mentorHoursPerWeek * mentorBillRate;
+    }
+
+
 
 
     // Work Out Length Of Internship
 
     var internLength = 36
 
-    if (internLength <6) {
-      console.log("Length is too Low")
+    function checkLength() {
+      if (internLength <6) {
+        console.log("Length is too Low")
+      }
+      else if (internLength >12) {
+        console.log("internLength is too high")
+      }
+      else {
+        console.log("Lenghth is correct")
+      };
     }
-    else if (internLength >12) {
-      console.log("internLength is too high")
-    }
-    else {
-      console.log("Lenghth is correct")
-    };
+
+
 
     //Display
+    function display() {
+      
+    var displaySummary = "weekly";
+    getHoursPerWeek()
+    getWeeklyWage()
+    getWeeklyMentor()
+    getWeeklyBillings()
+    checkLength()
+    var totalInternCostPerWeek
+    var totalWeeklyCosts
+    function getWeeklyTotals() {
+      totalWeeklyCosts = weeklyWages + weeklySuper + mentorCostPerWeek;
 
-    var totalWeeklyCosts = weeklyWages + weeklySuper + mentorCostPerWeek;
+      totalInternCostPerWeek = totalWeeklyCosts - internBillingsPerWeek;
+    }
+    function displayWeekly() {
 
-    var totalInternCostPerWeek = totalWeeklyCosts - internBillingsPerWeek;
-
-    var displaySummary = 4;
-
-    if (displaySummary==1) {
+      getWeeklyTotals()
       console.log("Wages Per Week");
       console.log(weeklyWages);
       console.log("Super");
@@ -108,7 +152,9 @@
       console.log("Total Weekly Cost");
       console.log(totalInternCostPerWeek)
     }
-    else if (displaySummary==2) {
+    function displayMonthly() {
+
+      getWeeklyTotals()
       console.log("Wages Per Month");
       console.log(weeklyWages * 4);
       console.log("Super");
@@ -126,7 +172,11 @@
       console.log("Total Monthly Cost");
       console.log(totalInternCostPerWeek * 4);
     }
-    else {
+    function displayTotal() {
+
+      getWeeklyTotals()
+
+      displaySummary = "total"
       console.log("Wages");
       console.log(weeklyWages * internLength);
       console.log("Super");
@@ -142,5 +192,18 @@
       console.log("Billable Hours");
       console.log(internBillingsPerWeek * internLength);
       console.log("Total Cost");
-      console.log(totalInternCostPerWeek * internLength)
-    };
+      console.log(totalInternCostPerWeek * internLength);
+    }
+
+    if (displaySummary=="weekly") {
+      displayWeekly()
+    }
+    else if (displaySummary=="monthly") {
+      displayMonthly() 
+    }
+    else {
+      displayTotal
+    }
+    
+  }
+  display()
