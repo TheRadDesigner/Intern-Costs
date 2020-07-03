@@ -80,8 +80,6 @@ p {
 
 h1 {
 	font-family: FoundersGrotesk, sans-serif;
-	font-style: bold;
-	font-weight: bold;
 	font-size: 40px;
 	line-height: 43px;
 	
@@ -119,8 +117,6 @@ h3 {
 
 h4 {
 	font-family: FoundersGrotesk, sans-serif;
-	font-style: bold;
-	font-weight: bold;
 	font-size: 20px;
 	line-height: 23px;
 }
@@ -142,7 +138,7 @@ button {
 	-webkit-appearance: none;
 	text-align: center;
 	font-family: aktiv-grotesk, sans-serif;
-	font-weight: 600;
+	font-weight: 400;
 	font-size: 20px;
 	line-height: 26px;
 	background-color: none;
@@ -215,7 +211,7 @@ input[type=text] {
 	border-radius: 25px;
 	float: right;
 	font-family: aktiv-grotesk, sans-serif;
-	font-weight: 600;
+	font-weight: 400;
 	font-size: 20px;
 	line-height: 23px;
 	text-align: center;
@@ -227,9 +223,11 @@ input[type=text] {
 
 .toggle {
 	margin: auto;
-	font-family: Aktiv Grotesk;
+	font-family: aktiv-grotesk, sans-serif;
+	font-weight: 400;
 	font-size: 20px;
-	line-height: 23px;
+	line-height: 26px;
+	background-color: none;
 	height: 40px;
 	border: 5px solid #FFBB37;
 	border-radius: 25px;
@@ -328,14 +326,18 @@ input[type=text] {
 	font-size: 60px;
 	width: 130px;
 	text-align: left;
-	font: Bold 60px/60px Founders Grotesk Condensed;
+	font-family: FoundersGrotesk, sans-serif;
+	font-style: bold;
+	font-weight: bold;
+	font-size: 60px;
+	line-height: 60px;
 	letter-spacing: 0px;
 }
 
 .logoUnderline {
 	height: 10px;
 	background-color: black;
-	margin-top: -15px;
+	margin-top: -5px;
 	width: 100px;
 }
 
