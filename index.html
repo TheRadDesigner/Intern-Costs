@@ -11,9 +11,12 @@
   <script src="https://kit.fontawesome.com/b5b3cdde7f.js" crossorigin="anonymous"></script>
   <!-- jQuery, Open Source, From: https://www.w3schools.com/jquery/jquery_get_started.asp -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <!-- fullPage.js, Open Source, From: https://alvarotrigo.com/fullPage/# -->
+  <link rel="stylesheet" href="libraries/fullPage.js-master/dist/fullpage.css" />
+  <script type="text/javascript" src="libraries/fullPage.js-master/dist/fullpage.js"></script>
   <title>How Much Does An Intern Really Cost?</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  
+
 </head>
 
 <body>
@@ -30,461 +33,464 @@
       <i class="fab fa-twitter"></i>
     </div>
   </div>
-  <div class="page">
-    <div class="infoContainer">
-      <div class="pageTitle title">
-        How Much<br>Does an Intern<br>Really<br>Cost?
-      </div>
-    </div>
-    <div class="formContainer">
-      <div class="cta">
-        <h2>Find out how much it really costs to Support the next generation of Creatives</h2>
-        <br>
-        <br>
-        <button id="goButton">Lets Go</button>
-      </div>
-    </div>
-  </div>
-  <div class="page">
-    <div class="infoContainer">
-      <div id="basicsPage" class="info">
-        <div class="title">
-          BENEFITS<br>THAT<br>OUTWEIGH<br>THE COSTS
-        </div>
-        <h2>
-          We get it, you’re not going to outlay these costs unless there’s some benefit. We got you covered look over here for some benefits of hiring an Intern
-        </h2>
-      </div>
-    </div>
-    <div class="formContainer">
-      <div class="form" id="basicsForm">
-        <div class="formHeader">
-          <h1>First Lets Get Some Basic Details</h1>
-        </div>
-        <br>
-        <div class="sliderGroup">
-          <h3>What is your Intern’s hourly pay rate?</h3>
-          <br>
-          <div class="sliderContainer">
-            <div class="sliderInnerContainer">
-              <div class="sliderValue">
-                <div class="sliderMin">
-                  <h3>$0</h3>
-                </div>
-                <div class="sliderMax">
-                  <h3>$50</h3>
-                </div>
-              </div>
-              <div class="silderDiv">
-                <input type="range" min="0" max="50" value="25" class="slider" id="hourlyRate">
-              </div>
-            </div>
-            <div class="sliderTextContainer">
-              <input type="text">
-            </div>
+
+  <!-- Start fullPage -->
+  <div id="fullpage">
+    <!-- Landing Page -->
+    <div class="section">
+      <div class="page">
+        <div class="infoContainer">
+          <div class="pageTitle title">
+            How Much<br>Does an Intern<br>Really<br>Cost?
           </div>
-          <br>
-          <div class="sliderFeedback" id="feedbackHourlyRate">
+        </div>
+        <div class="formContainer">
+          <div class="cta">
+            <h2>Find out how much it really costs to Support the next generation of Creatives</h2>
+            <br>
+            <br>
+            <button class="btnNext">Lets Go</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- Basics Page -->
+    <div class="section">
+      <div class="page">
+        <div class="infoContainer">
+          <div id="basicsPage" class="info">
+            <div class="title"> BENEFITS<br>THAT<br>OUTWEIGH<br>THE COSTS </div>
+            <h2> We get it, you’re not going to outlay these costs unless there’s some benefit. We got you covered look
+              over
+              here for some benefits of hiring an Intern </h2>
+          </div>
+        </div>
+        <div class="formContainer">
+          <div class="form" id="basicsForm">
+            <div class="formHeader">
+              <h1>First Lets Get Some Basic Details</h1>
+            </div> <br>
+            <div class="sliderGroup">
+              <h3>What is your Intern’s hourly pay rate?</h3> <br>
+              <div class="sliderContainer">
+                <div class="sliderInnerContainer">
+                  <div class="sliderValue">
+                    <div class="sliderMin">
+                      <h3>$0</h3>
+                    </div>
+                    <div class="sliderMax">
+                      <h3>$50</h3>
+                    </div>
+                  </div>
+                  <div class="silderDiv"> <input type="range" min="0" max="50" value="25" class="slider"
+                      id="hourlyRate">
+                  </div>
+                </div>
+                <div class="sliderTextContainer"> <input type="text"> </div>
+              </div> <br>
+              <div class="sliderFeedback" id="feedbackHourlyRate">
+                <p> Excellent, that is within our recommended pay rates. </p>
+              </div> <br>
+              <div class="moreInformation"> <a href="#">How did we work this out</a> </div>
+            </div> <br>
+            <div class="sliderGroup">
+              <h3>How many days a week will they be working?</h3> <br>
+              <div class="sliderContainer">
+                <div class="sliderInnerContainer">
+                  <div class="sliderValue">
+                    <div class="sliderMin">
+                      <h3>1</h3>
+                    </div>
+                    <div class="sliderMax">
+                      <h3>7</h3>
+                    </div>
+                  </div>
+                  <div class="silderDiv"> <input type="range" min="0" max="7" value="5" class="slider" id="daysPerWeek">
+                  </div>
+                </div>
+                <div class="sliderTextContainer"> <input type="text"> </div>
+              </div> <br>
+              <div class="sliderFeedback" id="feedbackDaysPerWeek">
+                <p> Whoa!! This is starting to look like a full time role. We recommend 2 to 3 days </p>
+              </div> <br>
+              <div class="moreInformation"> <a href="#">How did we work this out</a> </div>
+            </div> <br>
+            <div class="sliderGroup">
+              <h3>How many hours a day will they work?</h3> <br>
+              <div class="sliderContainer">
+                <div class="sliderInnerContainer">
+                  <div class="sliderValue">
+                    <div class="sliderMin">
+                      <h3>1</h3>
+                    </div>
+                    <div class="sliderMax">
+                      <h3>12</h3>
+                    </div>
+                  </div>
+                  <div class="silderDiv"> <input type="range" min="1" max="12" value="2" class="slider"
+                      id="hoursPerDay">
+                  </div>
+                </div>
+                <div class="sliderTextContainer"> <input type="text"> </div>
+              </div> <br>
+              <div class="sliderFeedback" id="feedbackHourlyRate">
+                <p> They aren’t going to get much done in such a short shift, also you might be breaking labour laws.
+                </p>
+              </div> <br>
+              <div class="moreInformation"> <a href="#">How did we work this out</a> </div>
+            </div> <br>
+            <div class="sliderGroup">
+              <h3>How many weeks is the internship?</h3> <br>
+              <div class="sliderContainer">
+                <div class="sliderInnerContainer">
+                  <div class="sliderValue">
+                    <div class="sliderMin">
+                      <h3>1</h3>
+                    </div>
+                    <div class="sliderMax">
+                      <h3>52</h3>
+                    </div>
+                  </div>
+                  <div class="silderDiv"> <input type="range" min="1" max="52" value="32" class="slider"
+                      id="internWeeks">
+                  </div>
+                </div>
+                <div class="sliderTextContainer"> <input type="text"> </div>
+              </div> <br>
+              <div class="sliderFeedback" id="feedbackInternWeeks">
+                <p> Thats a long time, are you sure this is an internship? It sounds more like a long term engagement?
+                </p>
+              </div> <br>
+              <div class="moreInformation"> <a href="#">How did we work this out</a> </div>
+            </div> 
+            <br> 
+            <button class="btnNext">Next</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Billing Page -->
+    <div class="section">
+      <div class="page">
+        <div class="infoContainer">
+          <div class="info">
+            <h1>
+              Altruristic
+            </h1>
+            <br>
             <p>
-              Excellent, that is within our recommended pay rates.
+              You have worked hard to get where you are. Now you can give back and help someone else with your knowledge
             </p>
-          </div>
-          <br>
-          <div class="moreInformation">
-            <a href="#">How did we work this out</a>
-          </div>
-        </div>
-        <br>
-        <div class="sliderGroup">
-          <h3>How many days a week will they be working?</h3>
-          <br>
-          <div class="sliderContainer">
-            <div class="sliderInnerContainer">
-              <div class="sliderValue">
-                <div class="sliderMin">
-                  <h3>1</h3>
-                </div>
-                <div class="sliderMax">
-                  <h3>7</h3>
-                </div>
-              </div>
-              <div class="silderDiv">
-                <input type="range" min="0" max="7" value="5" class="slider" id="daysPerWeek">
-              </div>
-            </div>
-            <div class="sliderTextContainer">
-              <input type="text">
-            </div>
-          </div>
-          <br>
-          <div class="sliderFeedback" id="feedbackDaysPerWeek">
+            <br>
+            <h1>
+              Sustainabilty
+            </h1>
+            <br>
             <p>
-              Whoa!! This is starting to look like a full time role. We recommend 2 to 3 days
+              Keep the industry moving, hiring an intern means new minds with fresh ideas and it could all start with
+              you.
             </p>
-          </div>
-          <br>
-          <div class="moreInformation">
-            <a href="#">How did we work this out</a>
-          </div>
-        </div>
-        <br>
-        <div class="sliderGroup">
-          <h3>How many hours a day will they work?</h3>
-          <br>
-          <div class="sliderContainer">
-            <div class="sliderInnerContainer">
-              <div class="sliderValue">
-                <div class="sliderMin">
-                  <h3>1</h3>
-                </div>
-                <div class="sliderMax">
-                  <h3>12</h3>
-                </div>
-              </div>
-              <div class="silderDiv">
-                <input type="range" min="1" max="12" value="2" class="slider" id="hoursPerDay">
-              </div>
-            </div>
-            <div class="sliderTextContainer">
-              <input type="text">
-            </div>
-          </div>
-          <br>
-          <div class="sliderFeedback" id="feedbackHourlyRate">
+            <br>
+            <h1>
+              Education
+            </h1>
+            <br>
             <p>
-              They aren’t going to get much done in such a short shift, also you might be breaking labour laws.
+              Ever thought that graduates are equipped for the industry? Well, here’s your chance to get them industry
+              ready.
             </p>
-          </div>
-          <br>
-          <div class="moreInformation">
-            <a href="#">How did we work this out</a>
-          </div>
-        </div>
-        <br>
-        <div class="sliderGroup">
-          <h3>How many weeks is the internship?</h3>
-          <br>
-          <div class="sliderContainer">
-            <div class="sliderInnerContainer">
-              <div class="sliderValue">
-                <div class="sliderMin">
-                  <h3>1</h3>
-                </div>
-                <div class="sliderMax">
-                  <h3>52</h3>
-                </div>
-              </div>
-              <div class="silderDiv">
-                <input type="range" min="1" max="52" value="32" class="slider" id="internWeeks">
-              </div>
-            </div>
-            <div class="sliderTextContainer">
-              <input type="text">
-            </div>
-          </div>
-          <br>
-          <div class="sliderFeedback" id="feedbackInternWeeks">
+            <br>
+            <h1>
+              Experience
+            </h1>
+            <br>
             <p>
-              Thats a long time, are you sure this is an internship? It sounds more like a long term engagement?
+              You get to trial a young designer without having to make a long term commitment, making sure their the
+              best
+              fit for your business.
             </p>
-          </div>
-          <br>
-          <div class="moreInformation">
-            <a href="#">How did we work this out</a>
+            <br>
           </div>
         </div>
-        <br>
-        <button>Next</button>
-      </div>
-    </div>
-  </div>
-  <div class="page">
-    <div class="infoContainer">
-      <div class="info">
-        <h1>
-          Altruristic
-        </h1>
-        <br>
-        <p>
-          You have worked hard to get where you are. Now you can give back and help someone else with your knowledge
-        </p>
-        <br>
-        <h1>
-          Sustainabilty
-        </h1>
-        <br>
-        <p>
-          Keep the industry moving, hiring an intern means new minds with fresh ideas and it could all start with you.
-        </p>
-        <br>
-        <h1>
-          Education
-        </h1>
-        <br>
-        <p>
-          Ever thought that graduates are equipped for the industry? Well, here’s your chance to get them industry ready.       
-        </p>
-        <br>
-        <h1>
-          Experience
-        </h1>
-        <br>
-        <p>
-          You get to trial a young designer without having to make a long term commitment, making sure their the best fit for your business.
-        </p>
-        <br>
-      </div>
-    </div>
-    <div class="formContainer">
-      <div class="form" id="billingForm">
-        <div class="formHeader">
-          <h1>How much are you going to bill for them?</h1>
-          <br>
-          <p>Your intern won’t just create value for you, they will do the same for your clients. So why wouldn’t you
-            bill them out. A good internship should be a mixture of activities: we recommend aiming for 40% active
-            mentoring, 10% shadowing and 50% billable hours.</p>
-        </div>
-        <br>
-        <div class="sliderGroup">
-          <h3>What is Your Intern’s Billable Rate Per Hour?</h3>
-          <br>
-          <div class="sliderContainer">
-            <div class="sliderInnerContainer">
-              <div class="sliderValue">
-                <div class="sliderMin">
-                  <h3>$0</h3>
+        <div class="formContainer">
+          <div class="form" id="billingForm">
+            <div class="formHeader">
+              <h1>How much are you going to bill for them?</h1>
+              <br>
+              <p>Your intern won’t just create value for you, they will do the same for your clients. So why wouldn’t
+                you
+                bill them out. A good internship should be a mixture of activities: we recommend aiming for 40% active
+                mentoring, 10% shadowing and 50% billable hours.</p>
+            </div>
+            <br>
+            <div class="sliderGroup">
+              <h3>What is Your Intern’s Billable Rate Per Hour?</h3>
+              <br>
+              <div class="sliderContainer">
+                <div class="sliderInnerContainer">
+                  <div class="sliderValue">
+                    <div class="sliderMin">
+                      <h3>$0</h3>
+                    </div>
+                    <div class="sliderMax">
+                      <h3>$200</h3>
+                    </div>
+                  </div>
+                  <div class="silderDiv">
+                    <input type="range" min="0" max="50" value="25" class="slider" id="internBillRate">
+                  </div>
                 </div>
-                <div class="sliderMax">
-                  <h3>$200</h3>
+                <div class="sliderTextContainer">
+                  <input type="text">
                 </div>
               </div>
-              <div class="silderDiv">
-                <input type="range" min="0" max="50" value="25" class="slider" id="internBillRate">
+              <br>
+              <div class="sliderFeedback" id="feedbackHourlyRate">
+                <p>
+                  You can bill any rate you like, but we recommend between $90 - $100 per hour, this of course varies
+                  depending on the intern’s skillset etc.
+                </p>
+              </div>
+              <br>
+              <div class="moreInformation">
+                <a href="#">How did we work this out</a>
               </div>
             </div>
-            <div class="sliderTextContainer">
-              <input type="text">
-            </div>
+            <br>
+            <button class="btnNext">Next</button>
+            <button class="btnBack">Back</button>
           </div>
-          <br>
-          <div class="sliderFeedback" id="feedbackHourlyRate">
+        </div>
+      </div>
+    </div>
+
+    <!-- Mentor Page -->
+    <div class="section">
+      <div class="page">
+        <div class="infoContainer">
+          <div class="info">
+            <h1>Still Not Convinced?</h1>
+            <br>
+            <h2>This is from a world renowned studio</h2>
+            <br>
             <p>
-              You can bill any rate you like, but we recommend between $90 - $100 per hour, this of course varies
-              depending on the intern’s skillset etc.
+              We see every internship as a success. Or at least so far all of them have and we’ve had over 50
+              internships
+              and prob more. For us it’s a social thing as much as how they deliver workwise. At Snask there’s no such
+              thing
+              as internship errands or duties. They are treated as part of the team.
             </p>
-          </div>
-          <br>
-          <div class="moreInformation">
-            <a href="#">How did we work this out</a>
+            <br>
+            <h2>
+              Fredrik Öst
+            </h2>
+            <br>
+            <h1>
+              SNASK
+            </h1>
+            <br>
+            <br>
+            <h2>This is from an intern</h2>
+            <br>
+            <p>
+              Uni was great, but it didn’t set me up for the industry. My Internship let me refine my knowledge from uni
+              and
+              turn it into real world expertise. I was always busy, my employer made sure I got the most out of every
+              day.
+            </p>
+            <br>
+            <h2>
+              Jojo Animen
+            </h2>
+            <br>
+            <h1>
+              Billy Blue College Of Design
+            </h1>
           </div>
         </div>
-        <br>
-        <button>Next</button>
+        <div class="formContainer">
+          <div class="form" id="mentorForm">
+            <div class="formHeader">
+              <h1>Calculating mentoring costs</h1>
+              <br>
+              <p>An internship is a learning experience, so naturally they will need some mentoring as we mentioned
+                before
+                40% of their time should be spent being directly mentored. We recommend setting aside one person as a
+                mentor, so we need to factor in their costs. </p>
+            </div>
+            <br>
+            <div class="textInput">
+              <div class="textInputLabel">
+                <h3>What is their Mentor’s Hourly Cost?</h3>
+              </div>
+              <div class="textInputValueContainer">
+                <input type="text">
+              </div>
+            </div>
+            <br>
+            <br>
+            <button class="btnNext">Next</button>
+            <button class="btnBack">Back</button>
+          </div>
+        </div>
       </div>
     </div>
-  </div>
-  <div class="page">
-    <div class="infoContainer">
-      <div class="info">
-        <h1>Still Not Convinced?</h1>
-        <br>
-        <h2>This is from a world renowned studio</h2>
-        <br>
-        <p>
-          We see every internship as a success. Or at least so far all of them have and we’ve had over 50 internships and prob more. For us it’s a social thing as much as how they deliver workwise. At Snask there’s no such thing as internship errands or duties. They are treated as part of the team. 
-        </p>
-        <br>
-        <h2>
-          Fredrik Öst
-        </h2>
-        <br>
-        <h1>
-          SNASK
-        </h1>
-        <br>
-        <br>
-        <h2>This is from an intern</h2>
-        <br>
-        <p>
-          Uni was great, but it didn’t set me up for the industry. My Internship let me refine my knowledge from uni and turn it into real world expertise. I was always busy, my employer made sure I got the most out of every day. 
-        </p>
-        <br>
-        <h2>
-          Jojo Animen
-        </h2>
-        <br>
-        <h1>
-          Billy Blue College Of Design
-        </h1>
-      </div>
-    </div>
-    <div class="formContainer">
-      <div class="form" id="mentorForm">
-        <div class="formHeader">
-          <h1>Calculating mentoring costs</h1>
-          <br>
-          <p>An internship is a learning experience, so naturally they will need some mentoring as we mentioned before
-            40% of their time should be spent being directly mentored. We recommend setting aside one person as a
-            mentor, so we need to factor in their costs. </p>
-        </div>
-        <br>
-        <div class="textInput">
-          <div class="textInputLabel">
-            <h3>What is their Mentor’s Hourly Cost?</h3>
-          </div>
-          <div class="textInputValueContainer">
-            <input type="text">
+
+    <!-- Summary Page -->
+    <div class="section">
+      <div class="page">
+        <div class="infoContainer">
+          <div class="info">
+            <div class="title">
+              GOT<br>EVERYTHING<br>YOU NEED?
+            </div>
+            <br>
+            <h2>
+              Get your program templates and everything you need to get started <a href="#"></a>HERE</a>
+            </h2>
           </div>
         </div>
-        <br>
-        <br>
-        <button>Next</button>
-      </div>
-    </div>
-  </div>
-  <div class="page">
-    <div class="infoContainer">
-      <div class="info">
-        <div class="title">
-          GOT<br>EVERYTHING<br>YOU NEED?
-        </div>
-        <br>
-        <h2>
-          Get your program templates and everything you need to get started <a href="#"></a>HERE</a>
-        </h2>
-      </div>
-    </div>
-    <div class="formContainer">
-      <div class="form" id="resultsForm">
-        <div class="formHeader">
-          <h1>Your Intern Costs</h1>
-        </div>
-        <br>
-        <div class="toggle">
-          <div id="toggleWeekly" class="toggleStop" onclick="changeSummary('weekly')">Weekly</div>
-          <div id="toggleMonthly" class="toggleStop" onclick="changeSummary('monthly')">Monthly</div>
-          <div id="toggleTotal" class="toggleStop" onclick="changeSummary('total')">Total</div>
-          <div id="toggleSelector" class="toggleSelector"></div>
-        </div>
-        <br>
-        <h4>Wage Costs</h4>
-        <br>
-        <div class="outputContainer">
-          <div class="outputLabel">
-            <p>Wages</p>
-          </div>
-          <div class="outputField" id="wages">
-            <p>$9,600</p>
-          </div>
-        </div>
-        <br>
-        <div class="outputContainer">
-          <div class="outputLabel">
-            <p>Super</p>
-          </div>
-          <div class="outputField" id="super">
-            <p>$912</p>
-          </div>
-        </div>
-        <br>
-        <div class="outputContainer">
-          <div class="outputLabel">
-            <h5>Total Wages</h5>
-          </div>
-          <div class="outputField" id="totalWages">
-            <h5>$10,512</h5>
-          </div>
-        </div>
-        <br>
-        <br>
-        <div class="outputLabel">
-          <h4>Mentoring Costs</h4>
-        </div>
-        <br>
-        <div class="outputContainer">
-          <div class="outputLabel">
-            <p>Mentoring Hours</p>
-          </div>
-          <div class="outputField" id="mentoringHours">
-            <p>96 Hours</p>
-          </div>
-        </div>
-        <br>
-        <div class="outputContainer">
-          <div class="outputLabel">
-            <h5>Mentoring Wages</h5>
-          </div>
-          <div class="outputField" id="mentoringWages">
-            <h5>$4,800</h5>
-          </div>
-        </div>
-        <br>
-        <div class="outputContainer">
-          <div class="outputLabel">
-            <h4>Total Costs</h4>
-          </div>
-          <div class="outputField" id="costs">
-            <h4>$15,312</h4>
-          </div>
-        </div>
-        <div class="totalUnderline"></div>
-        <br>
-        <div class="outputLabel">
-          <h4>Possible Income</h4>
-        </div>
-        <br>
-        <div class="outputContainer">
-          <div class="outputLabel">
-            <p>Billable Hours</p>
-          </div>
-          <div class="outputField" id="BillableHours">
-            <p>160 Hours</p>
-          </div>
-        </div>
-        <br>
-        <div class="outputContainer">
-          <div class="outputLabel">
-            <h5>Total Billings</h5>
-          </div>
-          <div class="outputField" id="billings">
-            <h5>$8,000</h5>
-          </div>
-        </div>
-        <br>
-        <div class="outputContainer">
-          <div class="outputLabel">
-            <h4>Total Income</h4>
-          </div>
-          <div class="outputField" id="income">
-            <h4>$15,312</h4>
-          </div>
-        </div>
-        <div class="totalUnderline"></div>
-        <br>
-        <div class="outputContainer">
-          <div class="outputLabel">
-            <h4>Total Costs</h4>
-          </div>
-          <div class="outputField" id="totalCost">
-            <h4>$7,312</h4>
-          </div>
-        </div>
-        <div class="totalUnderline"></div>
-        <br>
-        <div class="formFooter">
-          <div class="askCommunity">
-            <h3>Got Questions? Ask the community</h3>
-            <div class="askCommunityIcons">
-              <i class="fab fa-slack"></i>
-              <i class="fab fa-facebook"></i>
-              <i class="fab fa-twitter"></i>
+        <div class="formContainer">
+          <div class="form" id="resultsForm">
+            <div class="formHeader">
+              <h1>Your Intern Costs</h1>
+            </div>
+            <br>
+            <div class="toggle">
+              <div id="toggleWeekly" class="toggleStop" onclick="changeSummary('weekly')">Weekly</div>
+              <div id="toggleMonthly" class="toggleStop" onclick="changeSummary('monthly')">Monthly</div>
+              <div id="toggleTotal" class="toggleStop" onclick="changeSummary('total')">Total</div>
+              <div id="toggleSelector" class="toggleSelector"></div>
+            </div>
+            <br>
+            <h4>Wage Costs</h4>
+            <br>
+            <div class="outputContainer">
+              <div class="outputLabel">
+                <p>Wages</p>
+              </div>
+              <div class="outputField" id="wages">
+                <p>$9,600</p>
+              </div>
+            </div>
+            <br>
+            <div class="outputContainer">
+              <div class="outputLabel">
+                <p>Super</p>
+              </div>
+              <div class="outputField" id="super">
+                <p>$912</p>
+              </div>
+            </div>
+            <br>
+            <div class="outputContainer">
+              <div class="outputLabel">
+                <h5>Total Wages</h5>
+              </div>
+              <div class="outputField" id="totalWages">
+                <h5>$10,512</h5>
+              </div>
+            </div>
+            <br>
+            <br>
+            <div class="outputLabel">
+              <h4>Mentoring Costs</h4>
+            </div>
+            <br>
+            <div class="outputContainer">
+              <div class="outputLabel">
+                <p>Mentoring Hours</p>
+              </div>
+              <div class="outputField" id="mentoringHours">
+                <p>96 Hours</p>
+              </div>
+            </div>
+            <br>
+            <div class="outputContainer">
+              <div class="outputLabel">
+                <h5>Mentoring Wages</h5>
+              </div>
+              <div class="outputField" id="mentoringWages">
+                <h5>$4,800</h5>
+              </div>
+            </div>
+            <br>
+            <div class="outputContainer">
+              <div class="outputLabel">
+                <h4>Total Costs</h4>
+              </div>
+              <div class="outputField" id="costs">
+                <h4>$15,312</h4>
+              </div>
+            </div>
+            <div class="totalUnderline"></div>
+            <br>
+            <div class="outputLabel">
+              <h4>Possible Income</h4>
+            </div>
+            <br>
+            <div class="outputContainer">
+              <div class="outputLabel">
+                <p>Billable Hours</p>
+              </div>
+              <div class="outputField" id="BillableHours">
+                <p>160 Hours</p>
+              </div>
+            </div>
+            <br>
+            <div class="outputContainer">
+              <div class="outputLabel">
+                <h5>Total Billings</h5>
+              </div>
+              <div class="outputField" id="billings">
+                <h5>$8,000</h5>
+              </div>
+            </div>
+            <br>
+            <div class="outputContainer">
+              <div class="outputLabel">
+                <h4>Total Income</h4>
+              </div>
+              <div class="outputField" id="income">
+                <h4>$15,312</h4>
+              </div>
+            </div>
+            <div class="totalUnderline"></div>
+            <br>
+            <div class="outputContainer">
+              <div class="outputLabel">
+                <h4>Total Costs</h4>
+              </div>
+              <div class="outputField" id="totalCost">
+                <h4>$7,312</h4>
+              </div>
+            </div>
+            <div class="totalUnderline"></div>
+            <br>
+            <div class="formFooter">
+              <div class="askCommunity">
+                <h3>Got Questions? Ask the community</h3>
+                <div class="askCommunityIcons">
+                  <i class="fab fa-slack"></i>
+                  <i class="fab fa-facebook"></i>
+                  <i class="fab fa-twitter"></i>
+                </div>
+              </div>
+              <button class="btnBack">Back</button>
+              <button class="btnStartOver">Start Over</button>
             </div>
           </div>
-          <button>StartOver</button>
         </div>
       </div>
     </div>
+
+    <!-- End fullPage -->
   </div>
+
+  <script type="text/javascript" src="libraries/fullPage.js-master/dist/fullpage.js"></script>
   <script src="script/script.js"></script>
 </body>
 
