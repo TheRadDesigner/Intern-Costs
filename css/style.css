@@ -233,10 +233,17 @@ button {
 	border-radius: 25px;
 	width: 200px;
 	height: 45px;
-	float: right;
 	background-color: white;
 	box-sizing: border-box;
 	cursor: pointer;
+}
+
+.btnNext {
+	float: right;
+}
+
+.btnStartOver {
+	float: right;
 }
 
 button:hover {
@@ -359,44 +366,54 @@ input[type=text] {
 
 .page {
 	display: flex;
-	border: 5px solid;
+	position: relative;
+	
 }
 
 .infoContainer {
 	position: relative;
 	width: 50vw;
-	height: 1000px;
+	margin: 0 10%;
+	
+	
 }
 
 .info {
-	position: absolute;
 	width: 30vw;
-	height: 500px;
-	left: 10vw;
 }
 
 .formContainer {
 	position: relative;
 	width: 50vw;
-	height: 1000px;
+	margin: 0 10%;
+	
 }
 
 .form {
-	position: absolute;
 	width: 30vw;
-	left: 10vw;
 }
+
+.cta {
+	padding: 40% 0;
+}
+
 
 .totalUnderline {
 	width: 30vw;
 	height: 5px;
 	background-color: black;
 }
-
-.formFooter {
+.askCommunity {
 	display: flex;
 }
 
+.askCommunityText {
+	width: 80%;
+}
+.askCommunityIcons {
+	text-align: right;
+	width: 20%;
+}
 
 
 /* Header */
@@ -434,39 +451,7 @@ input[type=text] {
 	width: 90%;
 }
 
-/* Landing Page */
 
-.pageTitle {
-	text-align: left;
-	position: absolute;
-	left: 10vw;
-	top: 20vh;
-	width: 30vw;
-}
-
-.ctaContainer {
-	position: relative;
-	width: 50vw;
-	height: 90vh;
-}
-
-.cta {
-	position: absolute;
-	width: 30vw;
-	top: 45%;
-	left: 10vw;
-
-}
-
-/* Results Page */
-
-.askCommunity {
-	width: 70%;
-}
-
-.askCommunity h3 {
-	padding-bottom: 10px;
-}
 
 /* Media Queries */
 
