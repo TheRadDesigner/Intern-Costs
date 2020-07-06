@@ -433,6 +433,7 @@ input[type=text] {
 	display: flex;
 	position: fixed;
 	width: 100vw;
+	margin-right: 20px;
 	top: 0;
 }
 
@@ -457,122 +458,94 @@ input[type=text] {
 
 .headerAdvice {
 	text-align: right;
-	width: 90%;
+	width: 85%;
 }
 
 
 
 /* Media Queries */
 
-/* tablet */
+/* Medium Desktop */
 
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1367px) {
 
 	/* Global */
 
+	.title {
+		font-size: 90px;
+		line-height: 70px;
+	}
 	p {
 		font-size: 10px;
+		line-height: 13px;
 	}
-
+	
+	
 	h1 {
-		font-size: 20px;
+		font-size: 24px;
+		line-height: 27px;
 	}
-
+	
 	h2 {
-		font-size: 15px;
+		font-size: 18px;
+		line-height: 21px;
 	}
-
+	
 	h3 {
-		font-size: 15px;
+		font-size: 14px;
+		line-height: 17px;
+	}
+	
+	h4 {
+		font-size: 10px;
+		line-height: 13px;
+	}
+	
+	h5 {
+		font-weight: 300;
+		font-size: 14px;
+		line-height: 17px;
 	}
 
-	/* Sliders */
-
-	.sliderContainer {
-		width: 46vw;
+	.moreInformation a {
+		font-size: 10px;
+		line-height: 20px;
+	}
+	input[type=text] {
+		height: 30px;
+		border: 5px solid #FFBB37;
+		font-size: 12px;
+		line-height: 21px;
 	}
 
-	/* Page Layout */
-
-	.infoContainer {
-		height: 600px;
+	button {
+		font-size: 16px;
+		line-height: 19px;
+		width: 120px;
+		height: 35px;
 	}
 
-	.info {
-		height: 300px;
-		background-color: red;
+	.toggle {
+		font-size: 16px;
+		line-height: 19px;
+		height: 35px;
 	}
 
-	.formContainer {
-		width: 50vw;
-		height: 600px;
-	}
-
-	.form {
-		width: 46vw;
-		left: 2vw;
-	}
-
-	.totalUnderline {
-		width: 46vw;
-		height: 3px;
-	}
-
-	.formFooter {
-		display: flex;
-	}
-
-	#basicsForm {
-		top: 20%;
-	}
-
-	#billingForm {
-		top: 35%;
-	}
-
-	#mentorForm {
-		top: 40%;
-	}
-
-	#resultsForm {
-		top: 25%;
-	}
-
-	.titleContainer {
-		height: 600px;
-	}
-
-	.title {
-		font-size: 60px;
-		top: 20%;
-	}
-
-	.ctaContainer {
-		height: 600px;
-	}
-
-	.cta {
-		position: absolute;
-		width: 30vw;
-		top: 45%;
-		left: 10vw;
-		background-color: lightgreen;
-	}
 
 }
 
 @media screen and (max-width: 425px) {
 
 	.header {
-		height: 50px;
-		background-color: yellow;
+		height: 30px;
+		padding: 5px;
+	
 	}
 
 	.logo {
-		font-weight: 700;
-		font-style: normal;
 		font-size: 30px;
-		width: 65px;
+		width:50px;
+		line-height: 35px;
 	}
 
 	.logoUnderline {
@@ -581,11 +554,15 @@ input[type=text] {
 		width: 100%;
 	}
 
+	.headerAdvice {
+		display: none;
+	}
+
 	/* Sliders */
 
 	.sliderContainer {
-		display: block;
-		width: 100vw;
+		
+		width: 90vw;
 	}
 
 	/* Page Layout */
@@ -595,49 +572,21 @@ input[type=text] {
 	}
 
 	.formContainer {
-		width: 100vw;
-		height: 900px;
+		width: 90vw;
+		margin: 0px;
+		padding: 5vw;
 	}
 
 	.form {
-		width: 100vw;
-		left: -5px;
+		width: 90vw;
+		
 	}
 
 	.totalUnderline {
-		width: 100vw;
+		width: 90vw;
 		height: 3px;
 	}
 
-	/* Landing Page */
 
-	.landingPage {
-		display: block;
-	}
-
-	.titleContainer {
-		height: 400px;
-		width: 100vw;
-	}
-
-	.title {
-		font-size: 40px;
-		top: 20%;
-		left: 5vw;
-		width: 90vw;
-	}
-
-	.ctaContainer {
-		height: 350px;
-		width: 100vw;
-	}
-
-	.cta {
-		position: absolute;
-		width: 90vw;
-		top: 45%;
-		left: 5vw;
-		background-color: lightgreen;
-	}
 
 }

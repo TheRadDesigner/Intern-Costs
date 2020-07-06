@@ -27,7 +27,7 @@
       </div>
     </div>
     <div class="headerAdvice">
-      <p>Need some help?</p>
+      <h3>Need some help?</h3>
       <i class="fab fa-slack"></i>
       <i class="fab fa-facebook"></i>
       <i class="fab fa-twitter"></i>
@@ -73,7 +73,7 @@
               <h1>First Lets Get Some <span>Basic Details</span></h1>
             </div> <br>
             <div class="sliderGroup">
-              <h3>What is your Intern’s hourly pay rate?</h3> <br>
+              <h3>What is your Intern’s hourly pay rate?</h3>
               <div class="sliderContainer">
                 <div class="sliderInnerContainer">
                   <div class="sliderValue">
@@ -84,19 +84,19 @@
                       <h3>$50</h3>
                     </div>
                   </div>
-                  <div class="silderDiv"> <input type="range" min="0" max="50" value="25" class="slider"
-                      id="hourlyRate">
+                  <div class="silderDiv"> <input type="range" min="0" max="50" value="25" class="slider"id="hourlyRate" onchange="updateTextInput(this.value)">
                   </div>
                 </div>
-                <div class="sliderTextContainer"> <input type="text"> </div>
-              </div> <br>
+                <div class="sliderTextContainer" id="txtHourlyRate"> <input type="text"> </div>
+              </div>
               <div class="sliderFeedback" id="feedbackHourlyRate">
                 <p> Excellent, that is within our recommended pay rates. </p>
-              </div> <br>
+              </div> 
               <div class="moreInformation"> <a href="#">How did we work this out</a> </div>
-            </div> <br>
+            </div> 
+            <br>
             <div class="sliderGroup">
-              <h3>How many days a week will they be working?</h3> <br>
+              <h3>How many days a week will they be working?</h3>
               <div class="sliderContainer">
                 <div class="sliderInnerContainer">
                   <div class="sliderValue">
@@ -111,14 +111,17 @@
                   </div>
                 </div>
                 <div class="sliderTextContainer"> <input type="text"> </div>
-              </div> <br>
+              </div>
               <div class="sliderFeedback" id="feedbackDaysPerWeek">
-                <p> Whoa!! This is starting to look like a full time role. We recommend 2 to 3 days </p>
-              </div> <br>
+                <p> 
+                  Whoa!! This is starting to look like a full time role. We recommend 2 to 3 days 
+                </p>
+              </div>
               <div class="moreInformation"> <a href="#">How did we work this out</a> </div>
-            </div> <br>
+            </div> 
+            <br>
             <div class="sliderGroup">
-              <h3>How many hours a day will they work?</h3> <br>
+              <h3>How many hours a day will they work?</h3>
               <div class="sliderContainer">
                 <div class="sliderInnerContainer">
                   <div class="sliderValue">
@@ -134,15 +137,17 @@
                   </div>
                 </div>
                 <div class="sliderTextContainer"> <input type="text"> </div>
-              </div> <br>
+              </div> 
               <div class="sliderFeedback" id="feedbackHourlyRate">
-                <p> They aren’t going to get much done in such a short shift, also you might be breaking labour laws.
+                <p> 
+                  They aren’t going to get much done in such a short shift, also you might be breaking labour laws.
                 </p>
-              </div> <br>
+              </div>
               <div class="moreInformation"> <a href="#">How did we work this out</a> </div>
-            </div> <br>
+            </div>
+            <br>
             <div class="sliderGroup">
-              <h3>How many weeks is the internship?</h3> <br>
+              <h3>How many weeks is the internship?</h3>
               <div class="sliderContainer">
                 <div class="sliderInnerContainer">
                   <div class="sliderValue">
@@ -158,11 +163,11 @@
                   </div>
                 </div>
                 <div class="sliderTextContainer"> <input type="text"> </div>
-              </div> <br>
+              </div> 
               <div class="sliderFeedback" id="feedbackInternWeeks">
                 <p> Thats a long time, are you sure this is an internship? It sounds more like a long term engagement?
                 </p>
-              </div> <br>
+              </div> 
               <div class="moreInformation"> <a href="#">How did we work this out</a> </div>
             </div> 
             <br> 
@@ -228,7 +233,6 @@
             <br>
             <div class="sliderGroup">
               <h3>What is Your Intern’s Billable Rate Per Hour?</h3>
-              <br>
               <div class="sliderContainer">
                 <div class="sliderInnerContainer">
                   <div class="sliderValue">
@@ -247,14 +251,12 @@
                   <input type="text">
                 </div>
               </div>
-              <br>
               <div class="sliderFeedback" id="feedbackHourlyRate">
                 <p>
                   You can bill any rate you like, but we recommend between $90 - $100 per hour, this of course varies
                   depending on the intern’s skillset etc.
                 </p>
               </div>
-              <br>
               <div class="moreInformation">
                 <a href="#">How did we work this out</a>
               </div>
@@ -350,7 +352,7 @@
             <br>
             <br>
             <h2>
-              Get your program templates and everything you need to get started <a href="#">HERE</a>
+              Get your program templates and everything you need to get started <a href="#">here</a>
             </h2>
           </div>
         </div>

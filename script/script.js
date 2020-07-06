@@ -24,6 +24,9 @@ $('.btnStartOver').on('click',function() {
 });
 // Test App
 
+// Sliders
+
+
 // Set Hours Per Week
 
 var hoursPerWeek
