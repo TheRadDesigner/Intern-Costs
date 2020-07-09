@@ -1,3 +1,20 @@
+// Global Variables
+
+var payRate = 23
+var hoursPerWeek 
+var daysPerWeek = 3
+var hoursPerDay = 7.5
+var weeklySuper
+var internBillRate = 90;
+var weeklyWages
+var internBillableHoursPerWeek
+var internBillingsPerWeek
+var internLength 
+var mentorHoursPerWeek
+var mentorCostPerWeek
+var mentorBillRate = 100;
+
+
 // fullPage.js
 
 $(document).ready(function() {
@@ -22,20 +39,182 @@ $('.btnBack').on('click',function() {
 $('.btnStartOver').on('click',function() {
   $("#fullpage").fullpage.moveTo(1);
 });
-// Test App
 
-// Sliders
+
+// Basics Page
+
+// Pay Rate
+
+$("#payRate").bind("change", function(){
+	var sliderval = $(this).val();
+	payRate = sliderval;
+	checkPayRate();
+	console.log("Intern Pay rate = " + payRate)
+	$("#txtPayRate").find("input").val(sliderval);
+});
+
+$("#txtPayRate").bind("change", function(){
+	var textval = $(this).val();
+	payRate = textval;
+	checkPayRate();
+	$("#payRate").attr("value", textval)
+})
+
+
+function checkPayRate(){
+  if (payRate >=23 && payRate <= 29.99) {
+    $("#feedbackHourlyRate").html("<p>Awesome, That's in our recommended range</p>");
+  } 
+  else if (payRate >=19.5 && payRate <= 22.99) {
+    $("#feedbackHourlyRate").html("<p>While that ammount is above award wage, It is a little low.</p>");
+  } 
+  else if (payRate > 30) {
+    $("#feedbackHourlyRate").html("<p>That's a little high, is this really an internship?</p>");
+  } 
+  else if (payRate < 19.49) {
+    $("#feedbackHourlyRate").html("<p>That ammount is below award wage</p>");
+  } 
+}
+
+// Days Per Week
+
+$("#daysPerWeek").bind("change", function(){
+	var sliderval = $(this).val();
+	daysPerWeek = sliderval;
+  $("#txtDaysPerWeek").val(sliderval);
+  checkDays();
+});
+
+$("#txtDaysPerWeek").bind("change", function(){
+	var textval = $(this).val();
+	daysPerWeek = textval;
+	checkDays();
+	$("#daysPerWeek").attr("value", textval)
+});
+
+function checkDays(){
+
+  if (daysPerWeek > 3) {
+    $("#feedbackDaysPerWeek").html("<p>Whoa!! This is starting to look like a full time role. We recommend 2 to 3 days</p>");
+  } 
+  else if (daysPerWeek < 2) {
+    $("#feedbackDaysPerWeek").html("<p>Will they be able to acheive enough on one day?</p>");
+  } 
+  else  {
+    $("#feedbackDaysPerWeek").html("<p>Awesome, That's in our recommended range</p>");
+  } 
+}
+
+// Hours Per Day
+
+$("#hoursPerDay").bind("change", function(){
+	var sliderval = $(this).val();
+	hoursPerDay = sliderval;
+  $("#txthoursPerDay").val(sliderval);
+  checkHours();
+});
+
+$("#txthoursPerDay").bind("change", function(){
+	var textval = $(this).val();
+	hoursPerDay = textval;
+	checkHours();
+	$("#hoursPerDay").val(textval);
+})
+
+function checkHours(){
+
+  if (hoursPerDay> 8) {
+    $("#feedbackHoursPerDay").html("<p>That's a very long shift, you may have to pay over time</p>");
+  } 
+  else if (hoursPerDay < 4) {
+    $("#feedbackHoursPerDay").html("<p>They aren’t going to get much done in such a short shift, also you might be breaking labour laws. </p>");
+  } 
+  else  {
+    $("#feedbackHoursPerDay").html("<p>Awesome, That's in our recommended range</p>");
+  } 
+}
+
+// Internship Length
+
+$("#internWeeks").bind("change", function(){
+	var sliderval = $(this).val();
+	internLength = sliderval;
+  $("#txtInternWeeks").val(sliderval);
+  checkLength();
+});
+
+$("#txtInternWeeks").bind("change", function(){
+	var textval = $(this).val();
+	internLength = textval;
+	checkLength();
+	$("#internWeeks").val(textval);
+})
+
+function checkLength(){
+
+  if (internLength> 26) {
+    $("#feedbackInternWeeks").html("<p>Thats a long time, are you sure this is an internship? It sounds more like a long term engagement?</p>");
+  } 
+  else if (internLength < 12) {
+    $("#feedbackInternWeeks").html("<p>Internships are not effective in such a short amount of time. </p>");
+  } 
+  else  {
+    $("#feedbackInternWeeks").html("<p>Awesome, That's in our recommended range</p>");
+  } 
+}
+
+// Billings Page
+
+$("#internBillRate").bind("change", function(){
+	var sliderval = $(this).val();
+  internBillRate = sliderval;
+  $("#txtInternBillRate").val(sliderval);
+});
+
+$("#txtInternBillRate").bind("change", function(){
+	var textval = $(this).val();
+  internBillRate = textval;
+  $("#internBillRate").val(textval);
+});
+
+// Mentor Page
+
+$("#mentorCost").bind("change", function(){
+	var textval = $(this).val();
+  mentorBillRate = textval;
+});
+
+
+// Results Page
+
+// Toggle
+$("#toggleWeekly").on("click", function(){
+	// Visual styling
+	$(this).addClass("liambackground");
+	$("#toggleMonthly").removeClass("liambackground");
+
+	// Change all variables
+	$(".LiamInternPayRate").text(internPayRate * 1);
+});
+
+$("#toggleMonthly").on("click", function(){
+	// Visual styling
+	$(this).addClass("liambackground");
+	$("#toggleWeekly").removeClass("liambackground");
+
+	// Change all variables
+	$(".LiamInternPayRate").text(internPayRate * 4);
+});
+
+
+
 
 
 // Set Hours Per Week
 
-var hoursPerWeek
+
 
 function getHoursPerWeek() {
-
-  var daysPerWeek = 3;
-  var hoursPerDay = 8;
-
   if (daysPerWeek < 2) {
     console.log("days per week is too short")
   } else if (daysPerWeek > 3) {
@@ -51,7 +230,6 @@ function getHoursPerWeek() {
   } else {
     console.log("shift is correct")
   };
-
   hoursPerWeek = hoursPerDay * daysPerWeek;
 }
 
@@ -61,25 +239,9 @@ function getHoursPerWeek() {
 
 //Work Out Wages
 
-var weeklySuper
-
-var weeklyWages
-
 function getWeeklyWage() {
-  var payRate = 30;
-
-  if (payRate < 25) {
-    console.log("Pay is too Low")
-  } else if (payRate > 40) {
-    console.log("Pay is too high")
-  } else {
-    console.log("Pay is correct")
-  };
-
   var superPerHour = payRate * 0.095;
-
   weeklySuper = superPerHour * hoursPerWeek;
-
   weeklyWages = payRate * hoursPerWeek;
 }
 
@@ -88,14 +250,8 @@ function getWeeklyWage() {
 
 //Work Out Billings
 
-var internBillableHoursPerWeek
-
-var internBillingsPerWeek
-
 function getWeeklyBillings() {
   internBillableHoursPerWeek = hoursPerWeek / 2;
-
-  var internBillRate = 90;
 
   internBillingsPerWeek = internBillRate * 4;
 }
@@ -103,37 +259,15 @@ function getWeeklyBillings() {
 
 // Work Out Mentoring Costs
 
-var mentorHoursPerWeek
-var mentorCostPerWeek
-
 function getWeeklyMentor() {
   mentorHoursPerWeek = hoursPerWeek * 0.4;
-
-  var mentorBillRate = 100;
-
   mentorCostPerWeek = mentorHoursPerWeek * mentorBillRate;
 }
 
 
 
-
-// Work Out Length Of Internship
-
-var internLength = 36
-
-function checkLength() {
-  if (internLength < 6) {
-    console.log("Length is too Low")
-  } else if (internLength > 12) {
-    console.log("internLength is too high")
-  } else {
-    console.log("Lenghth is correct")
-  };
-}
-
-
-
 //Display
+
 function display() {
 
   var displaySummary = "weekly";
