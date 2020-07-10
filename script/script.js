@@ -9,37 +9,109 @@ var internBillRate = 90;
 var weeklyWages
 var internBillableHoursPerWeek
 var internBillingsPerWeek
-var internLength 
+var internLength = 12
 var mentorHoursPerWeek
 var mentorCostPerWeek
 var mentorBillRate = 100;
+var totalInternCostPerWeek
+var totalWeeklyCosts
+var totalWeeklyWageCost
+
+// Global Functions
+
+// Set Hours Per Week
+
+function getHoursPerWeek() {
+  hoursPerWeek = hoursPerDay * daysPerWeek;
 
 
-// fullPage.js
+}
 
-$(document).ready(function() {
-	$('#fullpage').fullpage({
-		//options here
-		autoScrolling:true,
-		scrollHorizontally: true
-	});
+//Work Out Wages
 
-	//methods
-	$.fn.fullpage.setAllowScrolling(true);
-});
+function getWeeklyWage() {
+  var superPerHour = payRate * 0.095;
+  weeklySuper = superPerHour * hoursPerWeek;
+  weeklyWages = payRate * hoursPerWeek;
+}
 
-$('.btnNext').on('click',function() {
-  $("#fullpage").fullpage.moveSectionDown();
-});
+//Work Out Billings
 
-$('.btnBack').on('click',function() {
-  $("#fullpage").fullpage.moveSectionUp();
-});
+function getWeeklyBillings() {
+  internBillableHoursPerWeek = hoursPerWeek / 2;
 
-$('.btnStartOver').on('click',function() {
-  $("#fullpage").fullpage.moveTo(1);
-});
+  internBillingsPerWeek = internBillRate * 4;
+}
 
+// Work Out Mentoring Costs
+
+function getWeeklyMentor() {
+  mentorHoursPerWeek = hoursPerWeek * 0.4;
+  mentorCostPerWeek = mentorHoursPerWeek * mentorBillRate;
+}
+
+function getWeeklyTotals() {
+  totalWeeklyCosts = weeklyWages + weeklySuper + mentorCostPerWeek;
+  totalWeeklyWageCost = weeklyWages + weeklySuper;
+  totalInternCostPerWeek = totalWeeklyCosts - internBillingsPerWeek;
+}
+
+function displayTotal () {
+  var totalWages = weeklyWages * internLength
+  var totalSuper = weeklySuper * internLength 
+  var totalWageCost = totalWeeklyWageCost * internLength
+  var totalMentoringHours = mentorHoursPerWeek * internLength
+  var totalMentorCost = mentorCostPerWeek  * internLength
+  var totalCosts = totalWeeklyCosts  *  internLength
+  var totalBillableHours = internBillableHoursPerWeek  * internLength
+  var totalBillings = internBillingsPerWeek  * internLength 
+  var totalCost = totalInternCostPerWeek * internLength
+  $("#wages").html("<p> $"+ totalWages.toFixed(2) + "</p>")
+  $("#super").html("<p> $"+ totalSuper.toFixed(2) + "</p>")
+  $("#totalWages").html("<h5>$"+ totalWageCost.toFixed(2) + "</h5>")
+  $("#mentoringHours").html("<p>"+ totalMentoringHours.toFixed(2) + "</p>")
+  $("#mentoringWages").html("<h5>$"+ totalMentorCost.toFixed(2) + "</h5>")
+  $("#costs").html("<h4>$"+ totalCosts.toFixed(2) + "</h4>")
+  $("#billableHours").html("<p>"+ totalBillableHours.toFixed(2) + "</p>")
+  $("#billings").html("<h5>$"+ totalBillings.toFixed(2) + "</h5>")
+  $("#income").html("<h4>$"+ totalBillings.toFixed(2) + "</h4>")
+  $("#totalCost").html("<h4>$"+ totalCost.toFixed(2) + "</h4>")
+}
+
+function displayWeekly () {
+  $("#wages").html("<p> $"+ weeklyWages.toFixed(2) + "</p>")
+  $("#super").html("<p> $"+ weeklySuper.toFixed(2) + "</p>")
+  $("#totalWages").html("<h5>$"+ totalWeeklyWageCost.toFixed(2) + "</h5>")
+  $("#mentoringHours").html("<p>"+ mentorHoursPerWeek.toFixed(2) + "</p>")
+  $("#mentoringWages").html("<h5>$"+ mentorCostPerWeek.toFixed(2) + "</h5>")
+  $("#costs").html("<h4>$"+ totalWeeklyCosts.toFixed(2) + "</h4>")
+  $("#billableHours").html("<p>"+ internBillableHoursPerWeek.toFixed(2) + "</p>")
+  $("#billings").html("<h5>$"+ internBillingsPerWeek.toFixed(2) + "</h5>")
+  $("#income").html("<h4>$"+ internBillingsPerWeek.toFixed(2) +"</h4>")
+  $("#totalCost").html("<h4>$"+ totalInternCostPerWeek.toFixed(2) +"</h4>")
+}
+
+function displayMonthly () {
+  var monthlyWages = weeklyWages * 4
+  var monthlySuper = weeklySuper * 4 
+  var monthlyWageCost = totalWeeklyWageCost * 4
+  var monthlyMentoringHours = mentorHoursPerWeek * 4
+  var monthlyMentorCost = mentorCostPerWeek  * 4
+  var monthlyCosts = totalWeeklyCosts  *  4
+  var monthlyBillableHours = internBillableHoursPerWeek  * 4
+  var monthlyBillings = internBillingsPerWeek  * 4
+  var monthlyCost = totalInternCostPerWeek * 4
+  $("#wages").html("<p> $"+ monthlyWages.toFixed(2) + "</p>")
+  $("#super").html("<p> $"+ monthlySuper.toFixed(2) + "</p>")
+  $("#totalWages").html("<h5>$"+ monthlyWageCost.toFixed(2) + "</h5>")
+  $("#mentoringHours").html("<p>"+ monthlyMentoringHours.toFixed(2) + "</p>")
+  $("#mentoringWages").html("<h5>$"+ monthlyMentorCost.toFixed(2) + "</h5>")
+  $("#costs").html("<h4>$"+ monthlyCosts.toFixed(2) + "</h4>")
+  $("#billableHours").html("<p>"+ monthlyBillableHours.toFixed(2) + "</p>")
+  $("#billings").html("<h5>$"+ monthlyBillings.toFixed(2) + "</h5>")
+  $("#income").html("<h4>$"+ monthlyBillings.toFixed(2) + "</h4>")
+  $("#totalCost").html("<h4>$"+ monthlyCost.toFixed(2) + "</h4>")
+}
 
 // Basics Page
 
@@ -184,179 +256,59 @@ $("#mentorCost").bind("change", function(){
   mentorBillRate = textval;
 });
 
+// Calculate
+
+function calculate(){
+  getHoursPerWeek()
+  getWeeklyWage()
+  getWeeklyMentor()
+  getWeeklyBillings()
+  getWeeklyTotals()
+  displayTotal()
+};
 
 // Results Page
 
 // Toggle
 $("#toggleWeekly").on("click", function(){
-	// Visual styling
-	$(this).addClass("liambackground");
-	$("#toggleMonthly").removeClass("liambackground");
-
-	// Change all variables
-	$(".LiamInternPayRate").text(internPayRate * 1);
+	$(this).addClass("toggleSelector");
+  $("#toggleMonthly").removeClass("toggleSelector");
+  $("#toggleTotal").removeClass("toggleSelector");
+	displayWeekly();
 });
 
 $("#toggleMonthly").on("click", function(){
-	// Visual styling
-	$(this).addClass("liambackground");
-	$("#toggleWeekly").removeClass("liambackground");
-
-	// Change all variables
-	$(".LiamInternPayRate").text(internPayRate * 4);
+	$(this).addClass("toggleSelector");
+  $("#toggleWeekly").removeClass("toggleSelector");
+  $("#toggleTotal").removeClass("toggleSelector");
+	displayMonthly();
 });
 
+$("#toggleTotal").on("click", function(){
+	$(this).addClass("toggleSelector");
+  $("#toggleWeekly").removeClass("toggleSelector");
+  $("#toggleMonthly").removeClass("toggleSelector");
+	displayTotal();
+});
 
+// fullPage.js
 
+$(document).ready(function() {
+	$('#fullpage').fullpage({
+		autoScrolling:true,
+	});
+	$.fn.fullpage.setAllowScrolling(false);
+});
 
+$('.btnNext').on('click',function() {
+  calculate()
+  $("#fullpage").fullpage.moveSectionDown();
+});
 
-// Set Hours Per Week
+$('.btnBack').on('click',function() {
+  $("#fullpage").fullpage.moveSectionUp();
+});
 
-
-
-function getHoursPerWeek() {
-  if (daysPerWeek < 2) {
-    console.log("days per week is too short")
-  } else if (daysPerWeek > 3) {
-    console.log("days per week is too long")
-  } else {
-    console.log("days per week is correct")
-  };
-
-  if (hoursPerDay < 4) {
-    console.log("Shift is not long enough")
-  } else if (hoursPerDay > 8) {
-    console.log("shift is too short")
-  } else {
-    console.log("shift is correct")
-  };
-  hoursPerWeek = hoursPerDay * daysPerWeek;
-}
-
-
-
-
-
-//Work Out Wages
-
-function getWeeklyWage() {
-  var superPerHour = payRate * 0.095;
-  weeklySuper = superPerHour * hoursPerWeek;
-  weeklyWages = payRate * hoursPerWeek;
-}
-
-
-
-
-//Work Out Billings
-
-function getWeeklyBillings() {
-  internBillableHoursPerWeek = hoursPerWeek / 2;
-
-  internBillingsPerWeek = internBillRate * 4;
-}
-
-
-// Work Out Mentoring Costs
-
-function getWeeklyMentor() {
-  mentorHoursPerWeek = hoursPerWeek * 0.4;
-  mentorCostPerWeek = mentorHoursPerWeek * mentorBillRate;
-}
-
-
-
-//Display
-
-function display() {
-
-  var displaySummary = "weekly";
-  getHoursPerWeek()
-  getWeeklyWage()
-  getWeeklyMentor()
-  getWeeklyBillings()
-  checkLength()
-  var totalInternCostPerWeek
-  var totalWeeklyCosts
-
-  function getWeeklyTotals() {
-    totalWeeklyCosts = weeklyWages + weeklySuper + mentorCostPerWeek;
-
-    totalInternCostPerWeek = totalWeeklyCosts - internBillingsPerWeek;
-  }
-
-  function displayWeekly() {
-
-    getWeeklyTotals()
-    console.log("Wages Per Week");
-    console.log(weeklyWages);
-    console.log("Super");
-    console.log(weeklySuper);
-    console.log("Mentor Costs");
-    console.log(mentorCostPerWeek);
-    console.log("Mentor Hours");
-    console.log(mentorHoursPerWeek);
-    console.log("Total Weekly Costs");
-    console.log(totalWeeklyCosts);
-    console.log("Billings");
-    console.log(internBillingsPerWeek);
-    console.log("Billable Hours");
-    console.log(internBillingsPerWeek);
-    console.log("Total Weekly Cost");
-    console.log(totalInternCostPerWeek)
-  }
-
-  function displayMonthly() {
-
-    getWeeklyTotals()
-    console.log("Wages Per Month");
-    console.log(weeklyWages * 4);
-    console.log("Super");
-    console.log(weeklySuper * 4);
-    console.log("Mentor Costs");
-    console.log(mentorCostPerWeek * 4);
-    console.log("Mentor Hours");
-    console.log(mentorHoursPerWeek * 4);
-    console.log("Total Monthly Costs");
-    console.log(totalWeeklyCosts * 4);
-    console.log("Billings");
-    console.log(internBillingsPerWeek * 4);
-    console.log("Billable Hours");
-    console.log(internBillingsPerWeek * 4);
-    console.log("Total Monthly Cost");
-    console.log(totalInternCostPerWeek * 4);
-  }
-
-  function displayTotal() {
-
-    getWeeklyTotals()
-
-    displaySummary = "total"
-    console.log("Wages");
-    console.log(weeklyWages * internLength);
-    console.log("Super");
-    console.log(weeklySuper * internLength);
-    console.log("Mentor Costs");
-    console.log(mentorCostPerWeek * internLength);
-    console.log("Mentor Hours");
-    console.log(mentorHoursPerWeek * internLength);
-    console.log("Total Costs");
-    console.log(totalWeeklyCosts * internLength);
-    console.log("Billings");
-    console.log(internBillingsPerWeek * internLength);
-    console.log("Billable Hours");
-    console.log(internBillingsPerWeek * internLength);
-    console.log("Total Cost");
-    console.log(totalInternCostPerWeek * internLength);
-  }
-
-  if (displaySummary == "weekly") {
-    displayWeekly()
-  } else if (displaySummary == "monthly") {
-    displayMonthly()
-  } else {
-    displayTotal
-  }
-
-}
-display()
+$('.btnStartOver').on('click',function() {
+  $("#fullpage").fullpage.moveTo(1);
+});

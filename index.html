@@ -45,6 +45,7 @@
           </div>
         </div>
         <div class="formContainer">
+          <div class="ctaMobile title">How Much Does An Intern Really Coast?</div>
           <div class="cta">
             <h2>Find out how much it really costs to Support the next generation of Creatives</h2>
             <br>
@@ -84,16 +85,16 @@
                       <h3>$50</h3>
                     </div>
                   </div>
-                  <div class="silderDiv"> <input type="range" min="0" max="50" value="25" class="slider"id="hourlyRate" onchange="updateTextInput(this.value)">
+                  <div class="silderDiv"> <input type="range" min="0" max="50" value="23" class="slider" id="payRate">
                   </div>
                 </div>
-                <div class="sliderTextContainer" id="txtHourlyRate"> <input type="text"> </div>
+                <div class="sliderTextContainer" id="txtPayRate"> <input type="text" value="23"> </div>
               </div>
               <div class="sliderFeedback" id="feedbackHourlyRate">
-                <p> Excellent, that is within our recommended pay rates. </p>
-              </div> 
+                <p>Aim to pay interns $23/hr plus 9.5% super</p>
+              </div>
               <div class="moreInformation"> <a href="#">How did we work this out</a> </div>
-            </div> 
+            </div>
             <br>
             <div class="sliderGroup">
               <h3>How many days a week will they be working?</h3>
@@ -107,18 +108,18 @@
                       <h3>7</h3>
                     </div>
                   </div>
-                  <div class="silderDiv"> <input type="range" min="0" max="7" value="5" class="slider" id="daysPerWeek">
+                  <div class="silderDiv"> <input type="range" min="1" max="7" value="3" class="slider" id="daysPerWeek">
                   </div>
                 </div>
-                <div class="sliderTextContainer"> <input type="text"> </div>
+                <div class="sliderTextContainer"> <input type="text" id="txtDaysPerWeek" value="3"> </div>
               </div>
               <div class="sliderFeedback" id="feedbackDaysPerWeek">
-                <p> 
-                  Whoa!! This is starting to look like a full time role. We recommend 2 to 3 days 
+                <p>
+                  We recommend 2 to 3 days
                 </p>
               </div>
               <div class="moreInformation"> <a href="#">How did we work this out</a> </div>
-            </div> 
+            </div>
             <br>
             <div class="sliderGroup">
               <h3>How many hours a day will they work?</h3>
@@ -132,15 +133,15 @@
                       <h3>12</h3>
                     </div>
                   </div>
-                  <div class="silderDiv"> <input type="range" min="1" max="12" value="2" class="slider"
+                  <div class="silderDiv"> <input type="range" min="1" max="12" value="7.5" class="slider"
                       id="hoursPerDay">
                   </div>
                 </div>
-                <div class="sliderTextContainer"> <input type="text"> </div>
-              </div> 
-              <div class="sliderFeedback" id="feedbackHourlyRate">
-                <p> 
-                  They aren’t going to get much done in such a short shift, also you might be breaking labour laws.
+                <div class="sliderTextContainer"> <input type="text" id="txthoursPerDay" value="7.5"> </div>
+              </div>
+              <div class="sliderFeedback" id="feedbackHoursPerDay">
+                <p>
+                  7.5 Hours is a normal day
                 </p>
               </div>
               <div class="moreInformation"> <a href="#">How did we work this out</a> </div>
@@ -158,19 +159,19 @@
                       <h3>52</h3>
                     </div>
                   </div>
-                  <div class="silderDiv"> <input type="range" min="1" max="52" value="32" class="slider"
+                  <div class="silderDiv"> <input type="range" min="1" max="52" value="12" class="slider"
                       id="internWeeks">
                   </div>
                 </div>
-                <div class="sliderTextContainer"> <input type="text"> </div>
-              </div> 
+                <div class="sliderTextContainer"> <input type="text" value="12" id="txtInternWeeks" > </div>
+              </div>
               <div class="sliderFeedback" id="feedbackInternWeeks">
-                <p> Thats a long time, are you sure this is an internship? It sounds more like a long term engagement?
+                <p> We recommend 12 weeks.
                 </p>
-              </div> 
+              </div>
               <div class="moreInformation"> <a href="#">How did we work this out</a> </div>
-            </div> 
-            <br> 
+            </div>
+            <br>
             <button class="btnNext">Next</button>
           </div>
         </div>
@@ -244,11 +245,11 @@
                     </div>
                   </div>
                   <div class="silderDiv">
-                    <input type="range" min="0" max="50" value="25" class="slider" id="internBillRate">
+                    <input type="range" min="0" max="200" value="90" class="slider" id="internBillRate">
                   </div>
                 </div>
                 <div class="sliderTextContainer">
-                  <input type="text">
+                  <input type="text" id="txtInternBillRate" value="90">
                 </div>
               </div>
               <div class="sliderFeedback" id="feedbackHourlyRate">
@@ -329,12 +330,12 @@
                 <h3>What is their Mentor’s Hourly Cost?</h3>
               </div>
               <div class="textInputValueContainer">
-                <input type="text">
+                <input type="text" id="mentorCost" value="100">
               </div>
             </div>
             <br>
             <br>
-            <button class="btnNext">Next</button>
+            <button class="btnNext" id="calculate">Next</button>
             <button class="btnBack">Back</button>
           </div>
         </div>
@@ -363,23 +364,22 @@
             </div>
             <br>
             <div class="toggle">
-              <div id="toggleWeekly" class="toggleStop" onclick="changeSummary('weekly')">Weekly</div>
-              <div id="toggleMonthly" class="toggleStop" onclick="changeSummary('monthly')">Monthly</div>
-              <div id="toggleTotal" class="toggleStop" onclick="changeSummary('total')">Total</div>
-              <div id="toggleSelector" class="toggleSelector"></div>
+              <div id="toggleWeekly" class="toggleStop">Weekly</div>
+              <div id="toggleMonthly" class="toggleStop">Monthly</div>
+              <div id="toggleTotal" class="toggleStop toggleSelector">Total</div>
             </div>
             <br>
             <h4>Wage Costs</h4>
-            <br>
+            <div class="breaks"><br></div>
             <div class="outputContainer">
               <div class="outputLabel">
                 <p>Wages</p>
               </div>
-              <div class="outputField" id="wages">
+              <div class="outputField " id="wages">
                 <p>$9,600</p>
               </div>
             </div>
-            <br>
+            <div class="breaks"><br></div>
             <div class="outputContainer">
               <div class="outputLabel">
                 <p>Super</p>
@@ -388,7 +388,7 @@
                 <p>$912</p>
               </div>
             </div>
-            <br>
+            <div class="breaks"><br></div>
             <div class="outputContainer">
               <div class="outputLabel">
                 <h5>Total Wages</h5>
@@ -397,12 +397,12 @@
                 <h5>$10,512</h5>
               </div>
             </div>
-            <br>
+            <div class="breaks"><br></div>
             <br>
             <div class="outputLabel">
               <h4>Mentoring Costs</h4>
             </div>
-            <br>
+            <div class="breaks"><br></div>
             <div class="outputContainer">
               <div class="outputLabel">
                 <p>Mentoring Hours</p>
@@ -411,7 +411,7 @@
                 <p>96 Hours</p>
               </div>
             </div>
-            <br>
+            <div class="breaks"><br></div>
             <div class="outputContainer">
               <div class="outputLabel">
                 <h5>Mentoring Wages</h5>
@@ -420,7 +420,7 @@
                 <h5>$4,800</h5>
               </div>
             </div>
-            <br>
+            <div class="breaks"><br></div>
             <div class="outputContainer">
               <div class="outputLabel">
                 <h4>Total Costs</h4>
@@ -434,16 +434,16 @@
             <div class="outputLabel">
               <h4>Possible Income</h4>
             </div>
-            <br>
+            <div class="breaks"><br></div>
             <div class="outputContainer">
               <div class="outputLabel">
                 <p>Billable Hours</p>
               </div>
-              <div class="outputField" id="BillableHours">
+              <div class="outputField outputP" id="billableHours">
                 <p>160 Hours</p>
               </div>
             </div>
-            <br>
+            <div class="breaks"><br></div>
             <div class="outputContainer">
               <div class="outputLabel">
                 <h5>Total Billings</h5>
@@ -452,7 +452,7 @@
                 <h5>$8,000</h5>
               </div>
             </div>
-            <br>
+            <div class="breaks"><br></div>
             <div class="outputContainer">
               <div class="outputLabel">
                 <h4>Total Income</h4>
@@ -465,7 +465,7 @@
             <br>
             <div class="outputContainer">
               <div class="outputLabel">
-                <h4>Total Costs</h4>
+                <h4>Total Cost</h4>
               </div>
               <div class="outputField" id="totalCost">
                 <h4>$7,312</h4>
